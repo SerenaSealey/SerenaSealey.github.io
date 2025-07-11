@@ -426,37 +426,51 @@ footer a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+   .hero {
+    position: relative;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
   .hero-text {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px 20px;
-  width: 90%;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    width: 90%;
+    max-width: 95%;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+  }
 
-.hero-text h1 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
+  .hero-text h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
 
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 12px;
-}
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 
-.hero-text button {
-  width: 90%;
-  max-width: 240px;
-  margin: 5px 0;
-  font-size: 0.95rem;
+  .hero-text button {
+    width: 90%;
+    max-width: 250px;
+    margin: 5px auto;
+    font-size: 0.95rem;
+    display: block;
+  }
 }
   nav ul {
     flex-direction: column;
