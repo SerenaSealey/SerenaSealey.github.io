@@ -483,50 +483,43 @@ footer a:hover {
   animation: jump 0.6s ease-in-out infinite;
 }
 
-@media (max-width: 480px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    position: static;
+@media (max-width: 768px) {
+  /* SLIM header height */
+  header {
+    padding: 5px 0;
   }
 
-  .hero-image {
-    height: auto;
-    object-fit: cover;
-  }
-
-  .hero-text {
-    position: static;
-    transform: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin-top: -10px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 0;
-    color: #fff;
-    text-align: center;
-    display: flex;
+  .header-container {
+    padding: 5px 10px;
     flex-direction: column;
     align-items: center;
   }
 
-  .hero-text h1 {
-    font-size: 1.5rem;
+  /* SLIM logo */
+  .logo {
+    max-height: 45px;
+    margin-bottom: 5px;
   }
 
-  .hero-text p {
-    font-size: 1rem;
-    text-align: center;
-    margin: 0 0 10px;
+  /* SMALLER nav links */
+  nav ul {
+    flex-direction: column;
+    gap: 6px;
   }
 
-  .hero-text button {
-    width: 90%;
-    max-width: 300px;
-    margin: 5px 0;
-    font-size: 1rem;
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 4px 2px;
+  }
+
+  /* SLIM social icons */
+  .social-icons a img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .social-icons {
+    gap: 10px;
+    margin-top: 5px;
   }
 }
