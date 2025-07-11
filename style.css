@@ -425,127 +425,88 @@ footer a:hover {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
-  /* --- Header --- */
+  /* Header wrapper */
   header {
     background-color: #002244;
     width: 100%;
-    position: relative; /* or fixed if you want it sticky */
-    top: 0;
-    left: 0;
+    position: relative;
     z-index: 1000;
-  }
-
-  .header-container {
-    display: flex;
-    flex-wrap: nowrap;       /* keep items on one line */
-    align-items: center;
-    justify-content: space-between;
     padding: 10px 15px;
   }
 
-  .logo {
-    max-height: 50px;        /* smaller logo */
-    width: auto;
+  /* Flex container for header content */
+  .header-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;       /* NO wrapping */
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
   }
 
+  /* Logo */
+  .logo-container {
+    flex: 0 0 auto !important;
+  }
+
+  .logo {
+    max-height: 50px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  /* Navigation */
   nav {
-    flex: 1;                 /* fill remaining space */
-    margin-left: 15px;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;            /* prevent overflowing */
+    margin-left: 15px !important;
   }
 
   nav ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    overflow-x: auto;                   /* allow horizontal scroll if needed */
+  }
+
+  nav ul li {
+    white-space: nowrap !important;
   }
 
   nav ul li a {
-    font-size: 0.9rem;
-    padding: 5px 8px;
-    white-space: nowrap;
-    color: white;
+    font-size: 0.9rem !important;
+    padding: 5px 8px !important;
+    color: white !important;
+    display: block !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
   }
 
   nav ul li a:hover,
   nav ul li a.active {
-    color: #0073e6;
+    color: #0073e6 !important;
   }
 
+  /* Social icons container */
   .social-icons {
-    flex-shrink: 0;
-    margin-left: 15px;
-    gap: 10px;
-    display: flex;
-    align-items: center;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: 15px !important;
   }
 
   .social-icons a img {
-    width: 22px;
-    height: 22px;
-    filter: brightness(100%);
-    transition: filter 0.3s ease;
+    width: 22px !important;
+    height: 22px !important;
+    filter: brightness(100%) !important;
+    transition: filter 0.3s ease !important;
   }
 
   .social-icons a:hover img {
-    filter: brightness(70%);
-  }
-
-  /* --- Hero Section --- */
-  .hero {
-    position: relative;
-    height: auto;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-
-  .hero-text {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    margin: 10px auto 0 auto;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 12px;
-    color: white;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .hero-text h1 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-
-  .hero-text button {
-    width: 100%;
-    max-width: 240px;
-    margin: 8px auto;
-    padding: 12px 0;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #0073e6;
-    border: none;
-    color: white;
-    transition: background-color 0.3s ease;
-  }
-
-  .hero-text button:hover {
-    background-color: #005bb5;
+    filter: brightness(70%) !important;
   }
 }
